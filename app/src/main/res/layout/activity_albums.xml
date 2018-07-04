@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Albums"
+    android:weightSum="10"
+    android:orientation="vertical"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_weight="2"
+        android:layout_height="0dp">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="Albums"
+            android:fontFamily="sans-serif-smallcaps"
+            android:textStyle="bold"
+            android:textColor="@android:color/holo_orange_light"
+            android:textSize="26sp"
+            android:gravity="center"
+            android:layout_weight="1"
+            />
+        <EditText
+            android:id="@+id/etUrl"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:inputType="number"
+            android:hint="Search by albumId"
+            android:gravity="bottom"
+            android:textSize="20sp"
+            />
+        <ImageButton
+            android:id="@+id/albumSearch"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@drawable/search"
+            />
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/albumRecycler"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="8" />
+</LinearLayout>
